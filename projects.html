@@ -9,24 +9,41 @@
     body {
       font-family: "Calisto MT", serif;
     }
-
-    .project {
-      margin-bottom: 2em;
-      padding: 1em;
-      border-left: 3px solid #444;
+    /* ... other styles ... */
+    .projects-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 90px;
+      justify-content: flex-start;
     }
-    .project h3 {
-      margin-top: 0;
+    .project-block {
+      width: 200px; /* adjust as needed */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* centers caption with image */
+      margin: 0; /* reset figure default margin */
     }
-
-    .project a {
+    
+    .project-block img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover; /* keeps proportions, crops overflow */
+      display: block;
+    }
+    
+    .project-block figcaption {
+      margin-top: 0.5em;    /* space between image & text */
+      font-size: 1em;
+      font-weight: bold;
+      text-align: center;   /* just to be sure */
+      line-height: 1.2;     /* keeps vertical spacing tight */
+    }
+    .project-block a {
       text-decoration: none;
-      color: #0077cc;
+      color: inherit;
+      display: block;
     }
-
-    .project a:hover {
-      text-decoration: underline;
-    }
+  </style>
   </style>
 </head>
 <body>
@@ -41,16 +58,31 @@
   </header>
 
   <main>
-    <section>
-
-      <!-- Project 1 --> <a>Categorizing certain words/frequencies/vocalizations in songs from Last.fm + tracking daily mood using Apple Health 
-      to create a model looking at what categories might impact mood or how mood might impact categories in songs</a>
-      <!-- Project 2 -->
-
-      <!-- Add more projects here -->
+    <section class="projects-gallery">
+      <figure class="project-block">
+        <a href="psychedelicsandsocialreward.html">
+          <img src="https://www.insidehook.com/wp-content/uploads/2016/10/hellohelios-1.gif?resize=550%2C550" alt="Project 1" />
+          <figcaption>Psychedelics, Critical Periods & Neuroplasticity</figcaption>
+        </a>
+      </figure>
+  
+      <figure class="project-block">
+        <a href="project2.html">
+          <img src="https://gifdb.com/images/high/sound-waves-in-process-26smo1khbjg00o6b.gif" alt="Project 2" />
+          <figcaption>Audio Frequencies, Model-Building & Mood States</figcaption>
+        </a>
+      </figure>
+  
+      <figure class="project-block">
+        <a href="project3.html">
+          <img src="https://cdn.pixabay.com/animation/2023/02/25/01/14/01-14-55-999_512.gif" alt="Project 3" />
+          <figcaption>Our Changing Planet, The Environment & Climate Modelling</figcaption>
+        </a>
+      </figure>
+      <!-- Add more projects as needed -->
     </section>
   </main>
-
+  
   <footer>
     <nav>
       <a href="https://github.com/Justin-Pho" class="external-link" target="_blank" rel="noopener noreferrer">GitHub</a> |
